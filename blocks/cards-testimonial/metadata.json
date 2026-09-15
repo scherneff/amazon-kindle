@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-testimonial",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "A vertical list of customer testimonials. Each entry shows a quotation followed by an attribution line (name, title, company). Text-only, no imagery.",
+  "contentPattern": "One row per testimonial, each cell containing the quote paragraph followed by an attribution paragraph. The first paragraph is treated as the quote, the last as the attribution.",
+  "usage": "Use for a set of customer quotes / testimonials with attribution.",
+  "options": [],
+  "memberVariantIds": ["cards-testimonial"]
+}

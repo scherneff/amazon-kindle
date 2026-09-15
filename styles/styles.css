@@ -1,3 +1,5 @@
+@import url("brand.css");
+
 @font-face {
   font-family: Montserrat;
   font-style: normal;
@@ -209,7 +211,7 @@ body {
   margin: 0;
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-family);
   font-size: var(--body-font-size-m);
   line-height: var(--body-line-height);
   padding: var(--header-height) 0 0;
@@ -245,7 +247,8 @@ a {
     font-weight: 500;
     text-decoration: none;
     border: 2px solid;
-    padding: 8px 12px;
+    padding: 12px 28px;
+    border-radius: 8px;
     box-sizing: border-box;
 
     &.btn-outline {
@@ -264,12 +267,18 @@ a {
   }
 
   &.btn-primary {
-    color: var(--color-background);
-    background-color: var(--color-text);
-    border: 2px solid var(--color-text);
+    color: var(--color-brand-ink);
+    background-color: var(--color-brand-yellow);
+    border: 2px solid var(--color-brand-yellow);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-brand-yellow-hover);
+      border-color: var(--color-brand-yellow-hover);
+    }
 
     &.btn-outline {
-      color: var(--color-text);
+      color: var(--color-brand-ink);
       background: transparent;
     }
   }

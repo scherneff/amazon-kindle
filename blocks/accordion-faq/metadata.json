@@ -1,0 +1,10 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "A vertical list of expandable question/answer rows. Each row shows a question with a plus/expand indicator; clicking reveals the answer below. Uses native details/summary for accessibility.",
+  "contentPattern": "One row per FAQ entry with two cells: the first holds the question text (becomes the clickable summary), the second holds the answer content (shown when expanded).",
+  "usage": "Use for a Frequently Asked Questions list of expandable question/answer pairs.",
+  "options": [],
+  "memberVariantIds": ["accordion-faq"]
+}

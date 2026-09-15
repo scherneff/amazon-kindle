@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "kindle-landing",
+      "urls": [
+        "https://www.amazon.com/b?node=121179473011"
+      ],
+      "representativeUrl": "https://www.amazon.com/b?node=121179473011",
+      "description": "Amazon 'Your Company Bookshelf' merchandised landing page: video hero, how-it-works steps, alternating feature highlights, customer testimonials, and an FAQ accordion.",
+      "urlPattern": "/*",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": [
+            ".apb-default-merchandised-search-2 .video",
+            ".apb-default-merchandised-search-2 .has-max-width"
+          ]
+        },
+        {
+          "name": "columns-steps",
+          "instances": [
+            ".apb-default-merchandised-search-4 .desktop > .flex-container > .flex-container > .has-max-width > .flex-container:nth-of-type(1)"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".apb-default-merchandised-search-4 .desktop > .flex-container > .flex-container > .has-max-width"
+          ]
+        },
+        {
+          "name": "cards-testimonial",
+          "instances": [
+            ".apb-default-merchandised-search-5 .desktop > .flex-container"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".apb-default-merchandised-search-6 .container.a20m.has-max-width"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc-hero",
+          "name": "Hero",
+          "selector": [
+            ".apb-default-merchandised-search-2"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-how-it-works",
+          "name": "Advisor callout + How it works",
+          "selector": [
+            ".apb-default-merchandised-search-4 .desktop > .flex-container > .flex-container > .has-max-width > .flex-container:nth-of-type(1)"
+          ],
+          "style": "grey",
+          "blocks": [
+            "columns-steps"
+          ],
+          "defaultContent": [
+            ".apb-default-merchandised-search-4 .help-text-container"
+          ]
+        },
+        {
+          "id": "rc-features",
+          "name": "Feature highlights",
+          "selector": [
+            ".apb-default-merchandised-search-4 .desktop > .flex-container > .flex-container > .has-max-width"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-testimonials",
+          "name": "Customer testimonials",
+          "selector": [
+            ".apb-default-merchandised-search-5"
+          ],
+          "style": "light",
+          "blocks": [
+            "cards-testimonial"
+          ],
+          "defaultContent": [
+            ".apb-default-merchandised-search-5 h2"
+          ]
+        },
+        {
+          "id": "rc-faq",
+          "name": "Frequently Asked Questions",
+          "selector": [
+            ".apb-default-merchandised-search-6"
+          ],
+          "style": "light",
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".apb-default-merchandised-search-6 h2"
+          ]
+        }
+      ]
+    }
+  ]
+}

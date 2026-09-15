@@ -1,0 +1,75 @@
+.hero-video {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-l, 24px);
+  align-items: center;
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl, 40px) 0;
+}
+
+.hero-video > div {
+  display: contents;
+}
+
+.hero-video .hero-video-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m, 16px);
+  align-items: flex-start;
+}
+
+.hero-video .hero-video-eyebrow {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+}
+
+.hero-video .hero-video-heading {
+  margin: 0;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05;
+  font-weight: 700;
+  color: var(--color-brand-ink);
+}
+
+/* The first cell paragraph carrying the branded title image */
+.hero-video .hero-video-text p {
+  margin: 0;
+  font-size: var(--body-font-size-l);
+}
+
+.hero-video .hero-video-media {
+  position: relative;
+  width: 100%;
+}
+
+/* Blue angular graphic sitting behind the video, echoing the source hero. */
+.hero-video .hero-video-media::before {
+  content: '';
+  position: absolute;
+  inset: -8% -12% -8% 6%;
+  background: var(--color-brand-accent);
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+}
+
+.hero-video .hero-video-media video,
+.hero-video .hero-video-media picture,
+.hero-video .hero-video-media img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+@media (width >= 900px) {
+  .hero-video {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl, 48px);
+    padding: var(--spacing-xxl, 48px) 0;
+  }
+}

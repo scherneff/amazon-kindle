@@ -1,0 +1,56 @@
+.accordion-faq {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+  padding: var(--spacing-l, 24px) 0 var(--spacing-xxl, 48px);
+}
+
+.accordion-faq .accordion-faq-item {
+  background: var(--color-brand-band);
+  border-bottom: 4px solid var(--color-brand-accent);
+}
+
+.accordion-faq .accordion-faq-item-label {
+  position: relative;
+  padding: var(--spacing-m, 16px) 52px var(--spacing-m, 16px) var(--spacing-l, 24px);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  color: var(--color-brand-ink);
+}
+
+.accordion-faq .accordion-faq-item-label::-webkit-details-marker {
+  display: none;
+}
+
+/* + / − expand indicator on the right. */
+.accordion-faq .accordion-faq-item-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 0.85em;
+  height: 0.85em;
+  background:
+    linear-gradient(var(--color-brand-ink), var(--color-brand-ink)) center / 100% 2px no-repeat,
+    linear-gradient(var(--color-brand-ink), var(--color-brand-ink)) center / 2px 100% no-repeat;
+  transition: transform 0.2s;
+}
+
+.accordion-faq .accordion-faq-item[open] .accordion-faq-item-label::after {
+  /* collapse the vertical bar → minus sign */
+  background: linear-gradient(var(--color-brand-ink), var(--color-brand-ink)) center / 100% 2px no-repeat;
+}
+
+.accordion-faq .accordion-faq-item-body {
+  padding: 0 var(--spacing-l, 24px) var(--spacing-m, 16px);
+  line-height: var(--body-line-height);
+}
+
+.accordion-faq .accordion-faq-item-body > *:first-child {
+  margin-top: 0;
+}
+
+.accordion-faq .accordion-faq-item-body a {
+  color: var(--color-brand);
+}

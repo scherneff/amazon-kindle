@@ -1,0 +1,26 @@
+/*
+ * Brand tokens — Amazon "Your Company Bookshelf" landing page.
+ * Extracted from the source screenshot + rendered snapshot (migration-work/).
+ * The source renders in Amazon Ember (proprietary); it falls back to Arial in the
+ * wild, so we use a system sans stack — no web-font request on the LCP path.
+ */
+:root {
+  /* brand palette (light) */
+  --color-brand: #2162a1;              /* Amazon link/action blue */
+  --color-brand-accent: #3a7bb8;       /* hero angular graphic blue */
+  --color-brand-yellow: #ffd814;       /* "Create a Bookshelf" CTA */
+  --color-brand-yellow-hover: #f7ca00;
+  --color-brand-ink: #0f1111;          /* Amazon near-black text */
+  --color-brand-band: #edf1f2;         /* how-it-works grey band */
+  --color-brand-quote: #e7f0fa;        /* highlighted testimonial tint */
+
+  /* map the kit's named light tokens onto the brand */
+  --color-text: var(--color-brand-ink);
+  --color-link: var(--color-brand);
+  --color-accent: var(--color-brand);
+  --color-shaded: var(--color-brand-band);
+
+  /* Amazon uses a system sans; keep headings and body on the same stack */
+  --font-family: "Amazon Ember", arial, helvetica, sans-serif;
+  --heading-font-family: "Amazon Ember", arial, helvetica, sans-serif;
+}

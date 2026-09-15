@@ -1,0 +1,10 @@
+{
+  "variantName": "hero-video",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Two-column hero: text content (eyebrow, heading, paragraph, CTA button) on the left, an embedded product video framed on the right. Stacks to a single column on narrow viewports.",
+  "contentPattern": "One row with two cells. Left cell: eyebrow line, heading, paragraph, and a CTA link. Right cell: a link to an .mp4 video (rendered as an HTML5 video player).",
+  "usage": "Use for an introductory hero that pairs a headline and call-to-action with a product demo video.",
+  "options": [],
+  "memberVariantIds": ["hero-video"]
+}

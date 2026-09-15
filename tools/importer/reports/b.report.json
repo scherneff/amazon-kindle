@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.amazon.com/b?node=121179473011",
+  "path": "b",
+  "timestamp": "2026-09-15T23:49:53.457Z",
+  "title": "Your Company Bookshelf | Bulk Books for Business | Amazon",
+  "template": "kindle-landing",
+  "blocks": [
+    "hero-video",
+    "hero-video",
+    "hero-video",
+    "hero-video",
+    "columns-steps",
+    "columns-feature",
+    "cards-testimonial",
+    "accordion-faq"
+  ]
+}

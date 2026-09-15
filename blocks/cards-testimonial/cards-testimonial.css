@@ -1,0 +1,60 @@
+.cards-testimonial {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+  padding: var(--spacing-l, 24px) 0 var(--spacing-xxl, 48px);
+}
+
+.cards-testimonial > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l, 24px);
+}
+
+.cards-testimonial .cards-testimonial-card {
+  padding: var(--spacing-l, 24px) var(--spacing-xl, 32px);
+  box-sizing: border-box;
+}
+
+/* Odd testimonials: filled blue card, left aligned. */
+.cards-testimonial .cards-testimonial-card:nth-child(odd) {
+  background: var(--color-brand-accent);
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Even testimonials: no fill, right aligned. */
+.cards-testimonial .cards-testimonial-card:nth-child(even) {
+  background: none;
+  text-align: right;
+  margin-left: auto;
+  max-width: 85%;
+}
+
+.cards-testimonial .cards-testimonial-quote {
+  margin: 0 0 var(--spacing-m, 16px);
+  font-size: var(--body-font-size-l);
+  line-height: var(--body-line-height);
+}
+
+.cards-testimonial .cards-testimonial-attribution {
+  margin: 0;
+  font-weight: 700;
+}
+
+.cards-testimonial .cards-testimonial-attribution em {
+  font-style: normal;
+}
+
+@media (width >= 900px) {
+  .cards-testimonial .cards-testimonial-card:nth-child(odd),
+  .cards-testimonial .cards-testimonial-card:nth-child(even) {
+    max-width: 70%;
+  }
+
+  .cards-testimonial .cards-testimonial-card:nth-child(even) {
+    max-width: 70%;
+  }
+}

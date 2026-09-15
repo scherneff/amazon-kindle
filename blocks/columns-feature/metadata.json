@@ -1,0 +1,10 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "A vertical stack of feature rows, each with an image on one side and a heading/paragraph (optionally a CTA) on the other. The image/text sides alternate row to row (z-pattern) on desktop; rows stack to a single column on mobile.",
+  "contentPattern": "One row per feature, each with two cells: one holding an image, the other holding a heading, paragraph, and optional CTA link. Image/text order alternates automatically for every other row.",
+  "usage": "Use for a series of feature highlights that alternate image and copy sides down the page.",
+  "options": [],
+  "memberVariantIds": ["columns-feature"]
+}

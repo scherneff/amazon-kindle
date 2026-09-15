@@ -1,0 +1,10 @@
+{
+  "variantName": "columns-steps",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "A horizontal row of numbered process steps. Each step shows a circular number badge followed by a short label. Steps sit side by side on desktop and stack vertically on mobile.",
+  "contentPattern": "One cell per step (either a single row with N cells, or N single-cell rows). Each cell holds the step's short label text. Step numbers are generated automatically in document order.",
+  "usage": "Use for a 'How it works' style sequence of ordered steps.",
+  "options": [],
+  "memberVariantIds": ["columns-steps"]
+}
