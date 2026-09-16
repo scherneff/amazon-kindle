@@ -185,6 +185,24 @@ header {
     .action-wrapper {
       right: -23px; /* 64 minus waffle icon inset */
     }
+
+    /* Amazon Books brand: show the wordmark text (default theme clips it) and
+       hide the generic template logo glyph so the wordmark carries the brand. */
+    .brand-text {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip-path: none;
+      white-space: nowrap;
+      font-size: var(--heading-font-size-l);
+      color: var(--color-brand-ink, #0f1111);
+    }
+
+    .icon-logo {
+      display: none;
+    }
   }
 
   .actions-section {
@@ -247,10 +265,15 @@ header {
       padding: 0;
       margin: 0;
       font: inherit;
-      color: var(--color-link);
+      color: var(--color-brand-ink, #0f1111);
+      font-weight: 500;
       text-align: inherit;
       cursor: pointer;
       line-height: 64px;
+
+      &:hover {
+        color: var(--color-brand, #2162a1);
+      }
     }
 
     .menu,
