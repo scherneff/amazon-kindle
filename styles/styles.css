@@ -156,17 +156,17 @@
   --color-yellow-800: #373100;
   --color-yellow-900: #1e1b00;
 
-  /* named colors */
+  /* named colors — brand values (Amazon Books); see brand.css for the tokens */
   --color-light-base: 255 255 255;
   --color-dark-base: 0 0 0;
   --color-light: rgb(255 255 255);
   --color-dark: rgb(0 0 0);
-  --color-text: light-dark(var(--color-dark), var(--color-light));
-  --color-link: light-dark(var(--color-gray-900), var(--color-gray-100));
-  --color-brand: var(--color-purple-500);
-  --color-accent: light-dark(var(--color-magenta-600), var(--color-magenta-500));
+  --color-text: var(--color-brand-ink);
+  --color-link: var(--color-brand);
+  --color-brand: #2162a1;
+  --color-accent: var(--color-brand);
   --color-background: light-dark(var(--color-light), var(--color-dark));
-  --color-shaded: light-dark(#f9f9f9, #111);
+  --color-shaded: var(--color-brand-band);
 
   /* fonts */
   --font-family: montserrat, "Trebuchet MS", sans-serif;
