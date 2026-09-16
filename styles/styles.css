@@ -321,6 +321,23 @@ a {
   }
 }
 
+/* Standalone "Contact a Book Advisor" mailto link in default content:
+   centered, larger teal text with no underline, matching the source. */
+.default-content p:has(> a[href^="mailto:"]) {
+  text-align: center;
+
+  a {
+    color: var(--color-brand-teal-link);
+    font-size: clamp(18px, 2vw, 24px);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
 main {
   ul,
   ol {
