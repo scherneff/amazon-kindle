@@ -15,7 +15,7 @@
   --color-brand-teal-link: #008296;    /* Amazon teal text link ("Contact a Book Advisor") */
   --color-brand-granite: #373d3e;      /* serif section headings + CTA label (source: color-granite) */
   --color-brand-band: #edf1f2;         /* how-it-works grey band */
-  --color-brand-quote: #e7f0fa;        /* highlighted testimonial tint */
+  --color-brand-quote-box: #71a7eb;    /* blue testimonial box (source: Rectangle_371a7eb.png) */
 
   /* map the kit's named light tokens onto the brand */
   --color-text: var(--color-brand-ink);
