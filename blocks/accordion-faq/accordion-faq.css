@@ -50,7 +50,9 @@
 }
 
 .accordion-faq .accordion-faq-item-body {
-  padding: 0 var(--spacing-l, 24px) var(--spacing-m, 16px);
+  padding: var(--spacing-m, 16px) var(--spacing-l, 24px);
+  background: var(--color-brand-quote-box);
+  color: var(--color-brand-ink);
   line-height: var(--body-line-height);
 }
 
@@ -59,5 +61,6 @@
 }
 
 .accordion-faq .accordion-faq-item-body a {
-  color: var(--color-brand);
+  color: var(--color-brand-ink);
+  text-decoration: underline;
 }
