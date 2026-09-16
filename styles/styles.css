@@ -267,7 +267,7 @@ a {
   }
 
   &.btn-primary {
-    color: var(--color-brand-ink);
+    color: var(--color-brand-granite);
     background-color: var(--color-brand-yellow);
     border: 2px solid var(--color-brand-yellow);
 

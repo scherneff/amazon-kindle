@@ -5,6 +5,11 @@
   max-width: var(--grid-container-width);
   margin: 0 auto;
   padding: var(--spacing-xxl, 48px) 0;
+  /* The feature photos carry their own white canvas around the artwork; keep
+     this block on the page background even when it shares a section with a
+     tinted block (e.g. the how-it-works band), or that canvas shows as a
+     mismatched box instead of blending in. */
+  background: var(--color-background);
 }
 
 .columns-feature .columns-feature-row {
@@ -34,9 +39,10 @@
 
 .columns-feature .columns-feature-text h2,
 .columns-feature .columns-feature-text h3 {
+  font-family: var(--heading-font-family-accent);
   font-size: var(--heading-font-size-xl);
   font-weight: 700;
-  color: var(--color-brand-ink);
+  color: var(--color-brand-granite);
 }
 
 .columns-feature .columns-feature-text p {
@@ -45,13 +51,26 @@
 }
 
 @media (width >= 900px) {
+  /* Each feature image is a full-width banner: the blue graphic occupies one
+     side, the rest is empty white space that the text overlays. The graphic
+     side alternates row to row, so the text column alternates with it. */
   .columns-feature .columns-feature-row {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xxl, 48px);
+    position: relative;
+    display: block;
   }
 
-  /* Alternate image/text sides on every other row (z-pattern). */
-  .columns-feature .columns-feature-row.reversed .columns-feature-media {
-    order: 2;
+  .columns-feature .columns-feature-text {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-end: 0; /* graphic on the left → text overlays the right half */
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-xxl, 48px);
+    justify-content: center;
+  }
+
+  /* graphic on the right → text overlays the left half */
+  .columns-feature .columns-feature-row.reversed .columns-feature-text {
+    inset-inline: 0 auto;
   }
 }

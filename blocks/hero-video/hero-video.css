@@ -21,7 +21,8 @@
 
 .hero-video .hero-video-eyebrow {
   margin: 0;
-  color: var(--color-brand);
+  color: var(--color-brand-teal);
+  font-family: var(--heading-font-family-accent);
   font-size: var(--heading-font-size-l);
   font-weight: 400;
 }
@@ -45,13 +46,16 @@
   width: 100%;
 }
 
-/* Blue angular graphic sitting behind the video, echoing the source hero. */
+/* Blue angular graphic sitting behind the video, echoing the source hero.
+   Flush on top/left so it never pokes into the text column above it (the
+   two columns stack in a single one below 900px); only bleeds out to the
+   right and bottom, where there's always clear space to peek into. */
 .hero-video .hero-video-media::before {
   content: '';
   position: absolute;
-  inset: -8% -12% -8% 6%;
+  inset: 0 -6% -6% 0;
   background: var(--color-brand-accent);
-  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
   z-index: 0;
 }
 

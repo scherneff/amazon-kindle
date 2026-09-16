@@ -14,20 +14,18 @@
 }
 
 .cards-testimonial .cards-testimonial-card {
-  padding: var(--spacing-l, 24px) var(--spacing-xl, 32px);
+  padding: 0;
   box-sizing: border-box;
+  color: var(--color-brand-teal);
 }
 
-/* Odd testimonials: filled blue card, left aligned. */
+/* Odd testimonials: left aligned. */
 .cards-testimonial .cards-testimonial-card:nth-child(odd) {
-  background: var(--color-brand-accent);
-  color: #fff;
-  border-radius: 10px;
+  text-align: left;
 }
 
-/* Even testimonials: no fill, right aligned. */
+/* Even testimonials: right aligned, echoing the source's zigzag layout. */
 .cards-testimonial .cards-testimonial-card:nth-child(even) {
-  background: none;
   text-align: right;
   margin-left: auto;
   max-width: 85%;
@@ -49,12 +47,14 @@
 }
 
 @media (width >= 900px) {
-  .cards-testimonial .cards-testimonial-card:nth-child(odd),
   .cards-testimonial .cards-testimonial-card:nth-child(even) {
     max-width: 70%;
   }
+}
 
-  .cards-testimonial .cards-testimonial-card:nth-child(even) {
-    max-width: 70%;
-  }
+/* The section heading above this block (default-content, not part of the
+   block itself) shares the source's serif "Bookerly" treatment. */
+.section:has(> .block-content .cards-testimonial) > .default-content h2 {
+  font-family: var(--heading-font-family-accent);
+  color: var(--color-brand-granite);
 }
