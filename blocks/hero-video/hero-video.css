@@ -29,7 +29,7 @@
 
 .hero-video .hero-video-heading {
   margin: 0;
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(32px, 5vw, 52px);
   line-height: 1.05;
   font-weight: 700;
   color: var(--color-brand-ink);
@@ -75,6 +75,12 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl, 48px);
     padding: var(--spacing-xxl, 48px) 0;
+  }
+
+  /* Cap the text width so lines wrap before reaching the blue diagonal that
+     leans in from the media column, rather than being clipped by it. */
+  .hero-video .hero-video-text {
+    max-width: 72%;
   }
 
   /* Desktop: the graphic grows into a large diagonal that extends above,
