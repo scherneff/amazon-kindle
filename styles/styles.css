@@ -322,13 +322,18 @@ a {
 }
 
 /* Standalone "Contact a Book Advisor" mailto link in default content:
-   centered, larger teal text with no underline, matching the source. */
-.default-content p:has(> a[href^="mailto:"]) {
+   centered, larger teal text with no underline, matching the source. Authors
+   may wrap it in a paragraph or a heading, so match either and neutralize the
+   heading's size/weight. */
+.default-content :is(p, h1, h2, h3, h4, h5, h6):has(> a[href^="mailto:"]) {
+  margin-block: var(--spacing-m, 16px);
   text-align: center;
+  font-weight: 400;
 
   a {
     color: var(--color-brand-teal-link);
     font-size: clamp(18px, 2vw, 24px);
+    font-weight: 400;
     text-decoration: none;
 
     &:hover,
