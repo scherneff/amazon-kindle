@@ -2,8 +2,13 @@ function buildVideo(link) {
   const video = document.createElement('video');
   video.src = link.href;
   video.controls = true;
+  // Autoplay requires muted; loop + playsinline mirror the source hero.
+  video.muted = true;
+  video.autoplay = true;
+  video.loop = true;
   video.setAttribute('playsinline', '');
-  video.setAttribute('preload', 'metadata');
+  video.setAttribute('preload', 'auto');
+  video.setAttribute('controlslist', 'nodownload');
   return video;
 }
 

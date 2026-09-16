@@ -76,4 +76,24 @@
     gap: var(--spacing-xxl, 48px);
     padding: var(--spacing-xxl, 48px) 0;
   }
+
+  /* Desktop: the graphic grows into a large diagonal that extends above,
+     below, and well to the left of the video, which floats centered on it —
+     matching the source hero. */
+  .hero-video .hero-video-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-video .hero-video-media::before {
+    inset: -22% -10% -16% -34%;
+    clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .hero-video .hero-video-media video,
+  .hero-video .hero-video-media picture,
+  .hero-video .hero-video-media img {
+    width: 86%;
+  }
 }
